@@ -18,12 +18,7 @@ const PRESIDENTS: [President; 5] = [
     President { firstname: "Bill", lastname: "Clinton", term_start: 1993, term_end: 2001 },
 ];
 
-fn main() {
-    // Versuchen, den Vornamen eines Präsidenten zu ändern
-    PRESIDENTS[0].firstname = "Joseph";  // Das wird einen Kompilierungsfehler erzeugen!
-    PRESIDENTS[0].term_start = 9999;  // Das wird einen Kompilierungsfehler erzeugen!
-    PRESIDENTS[0].term_end =  10000;  // Das wird einen Kompilierungsfehler erzeugen!
-
+fn main() {    
     for president in &PRESIDENTS {
         println!("{} {} served from {} to {}.", president.firstname, president.lastname, president.term_start, president.term_end);
     }

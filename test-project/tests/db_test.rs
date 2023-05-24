@@ -26,7 +26,7 @@ fn test_ping_database() {
     let port = getenv("POSTGRES_PORT");
     let addstr: String = format_addr_string(host, port);
     let _ = TcpStream::connect(addstr).expect("Failed to connect");
-    println!("Ping database to {} succeed", port);
+    println!("Ping database to {} on port {} succeed", host, port);
 }
 
 #[test]
