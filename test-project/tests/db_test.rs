@@ -1,3 +1,5 @@
+/*BliBlaBLubTest*/
+
 /*--------------------------------------------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
@@ -25,8 +27,10 @@ fn test_ping_database() {
     let host = getenv("POSTGRES_HOSTNAME");
     let port = getenv("POSTGRES_PORT");
     let addstr: String = format_addr_string(host, port);
-    let _ = TcpStream::connect(addstr).expect("Failed to connect");
-    println!("Ping database to {} on port {} succeed", host, port);
+    let _ = TcpStream::connect(addstr.clone()).expect("Failed to connect");
+    println!("Ping database to {} on port/*BliBlaBLubTest*/
+    
+     succeed", addstr);
 }
 
 #[test]

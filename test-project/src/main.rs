@@ -19,7 +19,11 @@ const PRESIDENTS: [President; 5] = [
 ];
 
 fn main() {    
-    for president in &PRESIDENTS {
+    let mut my_presidents=PRESIDENTS;
+    my_presidents[0].firstname="Joseph";
+    //PRESIDENTS[0].firstname="Joseph";
+
+    for president in &my_presidents {
         println!("{} {} served from {} to {}.", president.firstname, president.lastname, president.term_start, president.term_end);
     }
 }
